@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="支払いは"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toTopOf="@+id/im_logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/im_logo"
+                    android:layout_width="0dp"
+                    android:layout_height="138dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerInside"
+                    app:layout_constraintBottom_toTopOf="@+id/tx_payment"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/logo_felica" />
+
+                <TextView
+                    android:id="@+id/tx_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="135dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="135dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="支払い方法"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.476"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/im_logo" />
+
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="211dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tx_payment"
+                    app:layout_constraintVertical_bias="1.0">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal">
+
+                        <Button
+                            android:id="@+id/bt_suica"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom|clip_vertical|fill|top"
+                            android:onClick="OnClickButton"
+                            android:text="Suica"
+                            android:textAlignment="gravity"
+                            android:textAllCaps="false" />
+
+                        <Button
+                            android:id="@+id/bt_edy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom|clip_vertical|fill|top"
+                            android:onClick="OnClickButton"
+                            android:text="楽天Edy"
+                            android:textAlignment="gravity"
+                            android:textAllCaps="false" />
+
+                        <Button
+                            android:id="@+id/bt_nanaco"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom|clip_vertical|fill|top"
+                            android:onClick="OnClickButton"
+                            android:text="nanaco"
+                            android:textAlignment="gravity"
+                            android:textAllCaps="false" />
+
+                        <Button
+                            android:id="@+id/bt_waon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom|clip_vertical|fill|top"
+                            android:onClick="OnClickButton"
+                            android:text="WAON"
+                            android:textAlignment="gravity"
+                            android:textAllCaps="false" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal">
+
+                        <Button
+                            android:id="@+id/bt_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom|clip_vertical|fill|top"
+                            android:onClick="OnClickButton"
+                            android:text="iD"
+                            android:textAlignment="gravity"
+                            android:textAllCaps="false" />
+
+                        <Button
+                            android:id="@+id/bt_quicpay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom|clip_vertical|fill|top"
+                            android:onClick="OnClickButton"
+                            android:text="QUICPay"
+                            android:textAlignment="gravity"
+                            android:textAllCaps="false" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal">
+
+                        <Button
+                            android:id="@+id/bt_linepay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|clip_vertical|fill|top"
+                            android:onClick="OnClickButton"
+                            android:text="LINE Pay"
+                            android:textAlignment="gravity"
+                            android:textAllCaps="false" />
+
+                        <Button
+                            android:id="@+id/bt_paypay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|clip_vertical|fill|top"
+                            android:onClick="OnClickButton"
+                            android:text="PayPay"
+                            android:textAlignment="gravity"
+                            android:textAllCaps="false" />
+
+                        <Button
+                            android:id="@+id/bt_origamipay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|clip_vertical|fill|top"
+                            android:onClick="OnClickButton"
+                            android:padding="0sp"
+                            android:text="Origami Pay"
+                            android:textAlignment="gravity"
+                            android:textAllCaps="false"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/bt_dbarai"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|clip_vertical|fill|top"
+                            android:onClick="OnClickButton"
+                            android:text="d払い"
+                            android:textAlignment="gravity"
+                            android:textAllCaps="false" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal" >
+
+                        <Button
+                            android:id="@+id/bt_rakutenpay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="OnClickButton"
+                            android:text="楽天Pay"
+                            android:textAllCaps="false" />
+
+                        <Button
+                            android:id="@+id/bt_merpay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="OnClickButton"
+                            android:text="メルペイ"
+                            android:textAllCaps="false" />
+
+                        <Button
+                            android:id="@+id/bt_yuchopay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="OnClickButton"
+                            android:padding="0sp"
+                            android:text="ゆうちょPay"
+                            android:textAllCaps="false"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/bt_bankpay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="OnClickButton"
+                            android:text="銀行Pay"
+                            android:textAllCaps="false" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </TableLayout>
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
